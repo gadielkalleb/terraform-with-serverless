@@ -6,8 +6,8 @@ resource "aws_dynamodb_table" "users" {
     type = "S"
   }
 
-  write_capacity = "${var.write_capacity}"
-  read_capacity = "${var.read_capacity}"
+  write_capacity = var.write_capacity
+  read_capacity = var.read_capacity
 
   attribute {
     name = "email"
@@ -18,15 +18,15 @@ resource "aws_dynamodb_table" "users" {
     name = "${var.environment}-email-gsi"
     projection_type = "ALL"
     hash_key = "email"
-    write_capacity = "${var.write_capacity}"
-    read_capacity = "${var.read_capacity}"
+    write_capacity = var.write_capacity
+    read_capacity = var.read_capacity
   }
 }
 
 resource "aws_ssm_parameter" "dynamodb_users_table" {
   name = "${var.environment}-dynamodb-users-table"
   type = "String"
-  value = "${aws_dynamodb_table.users.name}"
+  value = aws_dynamodb_table.users.name
 }
 
 resource "aws_ssm_parameter" "email-gsi" {
