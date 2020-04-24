@@ -5,5 +5,9 @@
   },
   "devDependencies": {
     "aws-sdk": "^2.656.0"
-  }
+  },
+  "name": "register",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
 }
