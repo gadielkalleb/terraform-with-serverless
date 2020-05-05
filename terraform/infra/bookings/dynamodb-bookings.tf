@@ -1,4 +1,4 @@
-resource "aws_dynamodb_table" "bookins" {
+resource "aws_dynamodb_table" "bookings" {
   name = "${var.environment}-bookings"
   hash_key = "id"
   attribute {

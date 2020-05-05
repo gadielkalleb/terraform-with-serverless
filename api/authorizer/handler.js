@@ -3,7 +3,7 @@ const { verify } = require('jsonwebtoken')
 exports.authorizer =  function(event, context, callback) {
   const token = event.authorizationToken;
   try {
-    const user = verify(token, process.env.JWT_TOKEN)
+    const user = verify(token, process.env.JWT_SECRET)
     callback(null, generatePolicy('user', 'Allow', event.methodArn, user));
   } catch (error) {
     console.log("exports.authorizer -> error", error)
