@@ -1,1 +1,0 @@
-jwt_secret = "xSZLaAdjI2gCd9je6_C-K1CoPweR3iwNJiu6U7m4Ot4"
