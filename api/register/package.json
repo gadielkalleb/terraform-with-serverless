@@ -4,7 +4,7 @@
     "uuid": "^7.0.3"
   },
   "devDependencies": {
-    "aws-sdk": "^2.656.0"
+    "aws-sdk": "^2.814.0"
   },
   "name": "register",
   "version": "1.0.0",
